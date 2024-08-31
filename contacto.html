@@ -28,7 +28,7 @@
         <div class="container">
             <h1>Contacto</h1>
             <p>¿Tienes alguna pregunta o deseas saber más sobre cómo podemos ayudarte? Completa el siguiente formulario y nos pondremos en contacto contigo a la mayor brevedad posible.</p>
-            <form id="contact-form">
+            <form id="contact-form" action="enviar_contacto.php" method="post">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
                 
@@ -40,29 +40,29 @@
                 
                 <button type="submit" class="btn-primary">Enviar</button>
             </form>
-            <div id="success-message" class="message animate__animated animate__fadeIn">
-                El mensaje se mandó exitosamente.
+            <div id="success-message" class="message">
+                El mensaje se mandó exitosamente
             </div>
         </div>
     </section>
     <footer>
-        <p>&copy; 2024 OpenAI. Todos los derechos reservados.</p>
+        <p>&copy; Diseñado por Leonardo Tinco Future</p>
     </footer>
 
     <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita el envío real del formulario
+            event.preventDefault();
             
-            // Muestra el mensaje de éxito
             var successMessage = document.getElementById('success-message');
             successMessage.style.display = 'block';
-            successMessage.classList.add('animate__bounceIn'); // Animación de entrada
+            successMessage.classList.add('animate__bounceIn');
+
+            document.getElementById('contact-form').reset();
             
-            // Opcional: ocultar el mensaje después de unos segundos
             setTimeout(function() {
                 successMessage.classList.remove('animate__bounceIn');
                 successMessage.style.display = 'none';
-            }, 5000); // Ocultar después de 5 segundos
+            }, 5000);
         });
     </script>
 </body>
