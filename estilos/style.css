@@ -105,6 +105,16 @@ footer p {
 }
 
 /* Animations */
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.animate__bounceIn {
+    animation: bounceIn 1s ease;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -247,38 +257,67 @@ footer p {
     margin-bottom: 10px;
 }
 
+.client-item h3 {
+    color: #9b59b6;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
 .client-item p {
+    line-height: 1.8;
     color: #e0e0e0;
 }
 
-/* Contact Form */
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #121212;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.contact-section h1 {
+    font-size: 2.5em;
+    color: #9b59b6;
+    margin-bottom: 20px;
+}
+
 .contact-section form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
 .contact-section label {
-    font-weight: bold;
+    font-size: 1.1em;
     color: #e0e0e0;
+    margin-bottom: 5px;
 }
 
 .contact-section input, .contact-section textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #444;
     background-color: #1c1c1e;
     color: #e0e0e0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.contact-section input:focus, .contact-section textarea:focus {
+    border-color: #9b59b6;
+    outline: none;
 }
 
 .contact-section button {
-    padding: 15px 25px;
-    border: none;
-    border-radius: 5px;
     background-color: #9b59b6;
     color: #ffffff;
+    border: none;
+    padding: 15px 25px;
+    text-transform: uppercase;
     font-weight: bold;
-    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -300,7 +339,6 @@ footer p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Animations */
 @keyframes bounceIn {
     0% { transform: scale(0); opacity: 0; }
     50% { transform: scale(1.1); opacity: 1; }
