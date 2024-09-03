@@ -941,7 +941,7 @@ body.desarrollo:before {
   .grupo.demostrar > .ed-item,
   .ed-container.demostrar > .caja,
   .ed-container.demostrar > .ed-item {
-    background: #eee;
+    background: #000000;
     box-shadow: 0 0 0 1px steelblue;
     padding-top: 1em;
     padding-bottom: 1em; }
@@ -2714,7 +2714,7 @@ class="no-padding" a la caja le da padding cero solo a ella
               transform: scale(0.97); }
 
 body {
-  background: #fff;
+  background: #000000;
   font-family: "Open Sans", sans-serif;
   color: #333; }
 
